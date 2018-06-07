@@ -43,7 +43,7 @@ test('Registers a user', t => {
         .post('/register')
         .type('form')
         .send(attributes)
-        .expect(302),
+        .expect(200),
     )
     .then(() =>
       config.eventStore.getAll().then(events => {

@@ -39,7 +39,7 @@ test('Emits message(s) to a stream', t => {
     )
 })
 
-test('Fetches a stream with a projection', t => {
+test.only('Fetches a stream with a projection', t => {
   const videoUploadedType = 'VideoUploaded'
   const videoTranscodedType = 'VideoTranscoded'
 
