@@ -1,0 +1,12 @@
+extends ../../common-templates/layout
+
+block content
+  h1 Add product
+  form(action="/products" method="POST")
+    .form-group
+      label(for="name") Name&nbsp;
+      input.form-control(type="text" id="name" name="name")
+    .form-group
+      label(for="description") Description&nbsp;
+      textarea.form-control(id="description" name="description")
+    button(type="submit") Add it!

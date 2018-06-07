@@ -1,0 +1,33 @@
+extends ../../common-templates/layout
+
+block content
+  h1 This is the home page
+
+  .row
+    .col-md
+      .card
+        .card-body
+          h2 Register
+
+          form(action="/register" method="POST")
+            .form-group
+              label(for="reg-email") Email:&nbsp;
+              input.form-control(type="email" id="reg-email" name="email")
+            .form-group
+              label(for="reg-password") Password:&nbsp;
+              input.form-control(type="password" id="reg-password" name="password")
+            button.btn.btn-primary(type="submit") Register!
+
+    .col-md
+      .card
+        .card-body
+          h2 Login
+
+          form(action="/login" method="POST")
+            .form-group
+              label(for="log-email") Email:&nbsp;
+              input.form-control(type="email" id="log-email" name="email")
+            .form-group
+              label(for="log-password") Password:&nbsp;
+              input.form-control(type="password" id="log-password" name="password")
+            button.btn.btn-primary(type="submit") Log in!

@@ -1,0 +1,10 @@
+extends ../../common-templates/layout
+
+block content
+  h1 Search results
+
+  each product in products
+    .card
+      .card-body
+        h5.card-title= product.name
+        p.card-text= product.description

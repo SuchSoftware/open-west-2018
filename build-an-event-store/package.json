@@ -1,0 +1,38 @@
+{
+  "name": "build-an-event-store",
+  "version": "1.0.0",
+  "description": "Code for OpenWest 2018 talk",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint src migrations",
+    "start": "nodemon src/bin/start-server.js --color",
+    "test": "NODE_ENV=test tape 'src/**/*.test.js'",
+    "test:watch":
+      "nodemon --color --exec \"node script/clear-console.js && npm test\""
+  },
+  "author": "Ethan Garofolo <ethan@suchsoftware.com>",
+  "license": "ISC",
+  "dependencies": {
+    "camelcase-keys": "^4.2.0",
+    "knex": "^0.14.3",
+    "pg": "^7.4.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.1",
+    "blue-tape": "^1.0.0",
+    "eslint": "^4.8.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-config-suchsoftware": "^3.0.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.0.1",
+    "eslint-plugin-react": "^7.4.0",
+    "prettier": "^1.7.3",
+    "tape": "^4.8.0"
+  },
+  "engines": {
+    "node": "8.9.x"
+  },
+  "eslintConfig": {
+    "extends": ["suchsoftware"]
+  }
+}

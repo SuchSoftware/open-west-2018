@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  build_an_event_store_db:
+    build:
+      context: ./postgres
+      dockerfile: Dockerfile
+    env_file:
+      - ./postgres/db.env
+    ports:
+      - '0.0.0.0:5432:5432'
